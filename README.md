@@ -202,7 +202,7 @@ ManChan will read from a provided `configs.yaml` in the root folder that you mus
 DISCORD_TOKEN: "Provide your own"
 COMMAND_PREFIX: "!"
 PRESENCE_TEXT: "" # The text shown when online: 'Playing xxx'
-DATABASE_URL: "sqlite:///test_magi.db" # Change this as needed
+DATABASE_URL: "sqlite:///magi.db" # Change this as needed
 FORCE_DATABASE: true # if true, won't start without a database. Disable if you don't need one.
 ADMIN_USERS:
   - Add User Discord ID Here

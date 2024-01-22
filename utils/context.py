@@ -8,7 +8,7 @@ from disnake import HTTPException, NotFound, TextChannel
 if TYPE_CHECKING:
     from disnake import Member, Message
 
-    from .distyping import Context, ManChanBot
+    from .distyping import Context, KiltChanBot
 
 
 def get_member(ctx: Context, mention: Union[int, str]) -> Optional[Member]:
@@ -23,7 +23,7 @@ def get_member(ctx: Context, mention: Union[int, str]) -> Optional[Member]:
 
 
 async def get_message_no_context(
-    bot: ManChanBot, channel_id: int, message_id: int
+    bot: KiltChanBot, channel_id: int, message_id: int
 ) -> Optional[Message]:
     if not (channel_id and message_id):
         return

@@ -146,7 +146,7 @@ This function should check the config file and verify that it has the appropriat
 
 In order for Cogs to be loaded via Disnake, each Cog file must have a global function:
 ```python
-def setup(bot: ManChanBot):
+def setup(bot: KiltChanBot):
   if Cog.is_enabled(bot.configs):
     bot.add_cog(Cog(bot))
   else:

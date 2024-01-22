@@ -10,7 +10,7 @@ from disnake.ext import commands
 from disnake.ui import Button, Modal, Select, TextInput, View
 
 from db.anilist_users import AnilistUsers
-from main import ManChanBot
+from main import KiltChanBot
 from models.anilist_queries import AnilistQueries
 from utils.context import get_member
 from utils.distyping import Context
@@ -443,7 +443,7 @@ class Anilist(CommandBase):
         return configs["ENABLE_ANILIST"]
 
 
-def setup(bot: ManChanBot):
+def setup(bot: KiltChanBot):
     if Anilist.is_enabled(bot.configs):
         bot.add_cog(Anilist(bot))
     else:

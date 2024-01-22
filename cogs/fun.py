@@ -11,7 +11,7 @@ from utils.distyping import Context
 from .commandbase import CommandBase
 
 if TYPE_CHECKING:
-    from utils.distyping import ManChanBot
+    from utils.distyping import KiltChanBot
 
 
 class Fun(CommandBase):
@@ -26,7 +26,7 @@ class Fun(CommandBase):
         await ctx.channel.send(random.choice(options).strip())
 
 
-def setup(bot: ManChanBot):
+def setup(bot: KiltChanBot):
     if Fun.is_enabled():
         bot.add_cog(Fun(bot))  # type: ignore
     else:

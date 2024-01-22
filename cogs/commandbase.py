@@ -5,11 +5,11 @@ from typing import TYPE_CHECKING
 from disnake.ext.commands import Cog
 
 if TYPE_CHECKING:
-    from utils.distyping import Config, ManChanBot
+    from utils.distyping import Config, KiltChanBot
 
 
 class CommandBase(Cog):
-    def __init__(self, bot: ManChanBot):
+    def __init__(self, bot: KiltChanBot):
         self.bot = bot
 
     @classmethod

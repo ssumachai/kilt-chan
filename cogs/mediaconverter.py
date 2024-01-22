@@ -6,7 +6,7 @@ import requests
 from disnake import Message, Reaction, User
 from disnake.ext.commands import Cog
 
-from main import ManChanBot
+from main import KiltChanBot
 
 from .commandbase import CommandBase
 
@@ -90,7 +90,7 @@ class MediaConverter(CommandBase):
         return configs.get("ENABLE_MEDIA_LINK_CONVERTER", False)
 
 
-def setup(bot: ManChanBot):
+def setup(bot: KiltChanBot):
     if MediaConverter.is_enabled(bot.configs):
         bot.add_cog(MediaConverter(bot))
     else:

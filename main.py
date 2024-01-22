@@ -16,7 +16,7 @@ logging.basicConfig(
 )
 
 
-class ManChanBot(Bot):
+class KiltChanBot(Bot):
     def __init__(self):
         self.configs = {}
         self.db_on = False
@@ -114,5 +114,5 @@ class ManChanBot(Bot):
 
 
 if __name__ == "__main__":
-    bot = ManChanBot()
+    bot = KiltChanBot()
     bot.run()

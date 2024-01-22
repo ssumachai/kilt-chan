@@ -17,11 +17,11 @@ from utils.distyping import Context
 from .commandbase import CommandBase
 
 if TYPE_CHECKING:
-    from utils.distyping import ManChanBot
+    from utils.distyping import KiltChanBot
 
 
 class ShareLink(CommandBase):
-    def __init__(self, bot: ManChanBot):
+    def __init__(self, bot: KiltChanBot):
         super().__init__(bot)
         self.sp = spotipy.Spotify(
             auth_manager=SpotifyClientCredentials(
@@ -74,7 +74,7 @@ class ShareLink(CommandBase):
         )
 
 
-def setup(bot: ManChanBot):
+def setup(bot: KiltChanBot):
     if ShareLink.is_enabled(bot.configs):
         bot.add_cog(ShareLink(bot))
     else:
